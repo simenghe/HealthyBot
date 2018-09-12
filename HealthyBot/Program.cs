@@ -31,6 +31,7 @@ namespace HealthyBot
             await _client.StartAsync();
             await _handler.InitializeAsync(_client);
             await Task.Delay(-1);
+            Console.ReadKey(true);
         }
 
         private async Task Log(LogMessage msg)
