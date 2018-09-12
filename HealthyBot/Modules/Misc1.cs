@@ -50,12 +50,12 @@ namespace HealthyBot.Modules
         [Command("Banchode")]
         public async Task Banchode()
         {
-            await Context.Channel.SendMessageAsync("Banchode banchode stop being styoobid", true);
+            await Context.Channel.SendMessageAsync("Banchode banchode stop being styoobid", false);
         }
         [Command("Tilted")]
         public async Task Tilted()
         {
-            await Context.Channel.SendMessageAsync("TILLLLLLLLLLLLLLLLLLLLTED", true);
+            await Context.Channel.SendMessageAsync("TILLLLLLLLLLLLLLLLLLLLTED", false);
         }
         [Command("Golems")]
         public async Task Golems ()
@@ -66,50 +66,50 @@ namespace HealthyBot.Modules
         public async Task Echo([Remainder] string message)
         {
             //var embed = new EmbedBuilder();
-            await Context.Channel.SendMessageAsync(message,true);
+            await Context.Channel.SendMessageAsync(message,false);
         }
         [Command("MultipleChoice")]
         public async Task MultipleChoice()
         {
             //var embed = new EmbedBuilder();
-            await Context.Channel.SendMessageAsync("Pick C!", true);
+            await Context.Channel.SendMessageAsync("Pick C!", false);
         }
         [Command("CoinFlip")]
         public async Task CoinFlip()
         {
             if (CoinFlips())
             {
-                await Context.Channel.SendMessageAsync("HEADS!", true);
+                await Context.Channel.SendMessageAsync("HEADS!", false);
             }
             else
             {
-                await Context.Channel.SendMessageAsync("TAILS!", true);
+                await Context.Channel.SendMessageAsync("TAILS!", false);
             }
         }
         [Command("MyAverage")]
         public async Task MyAverage()
         {
-            await Context.Channel.SendMessageAsync("Projected mark is : "+rng.Next(50,101), true);
+            await Context.Channel.SendMessageAsync("Projected mark is : "+rng.Next(50,101), false);
         }
         [Command("Bust")]
         public async Task Bust()
         {
-            await Context.Channel.SendMessageAsync("I BUST I BUST SORRY SORRY SORRY IM GAY",true);
+            await Context.Channel.SendMessageAsync("I BUST I BUST SORRY SORRY SORRY IM GAY",false);
         }
         [Command("Autism")]
         public async Task Autism()
         {
-            await Context.Channel.SendMessageAsync("You have autism!",true);
+            await Context.Channel.SendMessageAsync("You have autism!",false);
         }
         [Command("Wez")]
         public async Task Wez()
         {
-            await Context.Channel.SendMessageAsync("WEZZZZZZZZZZZZZZZZ YOU ARE PART OF WEZZZZZZZZZZZZZZZZZZZZZZZZ", true);
+            await Context.Channel.SendMessageAsync("WEZZZZZZZZZZZZZZZZ YOU ARE PART OF WEZZZZZZZZZZZZZZZZZZZZZZZZ", false);
         }
         [Command("Nut")]
         public async Task Nut()
         {
-            await Context.Channel.SendMessageAsync("TOUKA TOUKA TOUKA", true);
+            await Context.Channel.SendMessageAsync("TOUKA TOUKA TOUKA", false);
         }
         [Command("Hello")]
         public async Task Hello()
@@ -120,32 +120,32 @@ namespace HealthyBot.Modules
         [Command("Shabi")]
         public async Task ShaBi()
         {
-            await Context.Channel.SendMessageAsync("You are a sha bi",true);
+            await Context.Channel.SendMessageAsync("You are a sha bi",false);
         }
         [Command("aCKROT")]
         public async Task Ackrot()
         {
-            await Context.Channel.SendMessageAsync("NUT ACKROT BADAM SHALOM", true);
+            await Context.Channel.SendMessageAsync("NUT ACKROT BADAM SHALOM", false);
         }
         [Command("Work")]
         public async Task Work()
         {
-            await Context.Channel.SendMessageAsync("League of legends", true);
+            await Context.Channel.SendMessageAsync("League of legends", false);
         }
         [Command("Wait")]
         public async Task Wait()
         {
-            await Context.Channel.SendMessageAsync("WAIT WAIT WAIT WAIT", true);
+            await Context.Channel.SendMessageAsync("WAIT WAIT WAIT WAIT", false);
         }
         [Command("Alpha")]
         public async Task Alpha()
         {
-            await Context.Channel.SendMessageAsync("ENGAGE ENGAGE ENGAGE BANCHODES STOP BEING BETA", true);
+            await Context.Channel.SendMessageAsync("ENGAGE ENGAGE ENGAGE BANCHODES STOP BEING BETA", false);
         }
         [Command("Beta")]
         public async Task Beta()
         {
-            await Context.Channel.SendMessageAsync("hey guys fawad syed here gonna mute mic and cs like a beta", true);
+            await Context.Channel.SendMessageAsync("hey guys fawad syed here gonna mute mic and cs like a beta", false);
         }
         [Command("Bitcoin")]
         public async Task UpdateBitcoinLabel()
@@ -181,6 +181,14 @@ namespace HealthyBot.Modules
             var goldObject = JObject.Parse(goldJSON);
             var goldPrice = (double)goldObject["rates"][currencyType];
             await Context.Channel.SendMessageAsync("$1 Canadian is " + goldPrice+" in "+currencyType);
+        }
+        [Command("Tesla")]
+        public async Task Tesla()
+        {
+            const string address = "https://www.quandl.com/api/v3/datasets/SSE/TL0.json?api_key=NW6eAik2ebsCLuEgsEhA";
+            var client= new HttpClient();
+            var teslaJson = await client.GetStringAsync(address);
+            var teslaObj = JObject.Parse(teslaJson);
         }
 
     }
