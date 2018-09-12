@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\simen\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_HealthyBot.83458234.00" t="ExcludeRecursive" />
+    <e p="D:\Programming\SiderProjects\HealthyBot-20180912T230308Z-001\HealthyBot" t="IncludeFlat">
+      <e p="HealthyBot" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CommandHandler.cs" t="Include" />
+        <e p="Config.cs" t="Include" />
+        <e p="HealthyBot.csproj" t="IncludeRecursive" />
+        <e p="Modules" t="Include">
+          <e p="Misc1.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Systemlan" t="Include">
+          <e p="alerts.json" t="Include" />
+        </e>
+        <e p="Utilities.cs" t="Include" />
+      </e>
+      <e p="HealthyBot.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
