@@ -100,12 +100,7 @@ namespace HealthyBot.Modules
         [Command("Bust")]
         public async Task Bust()
         {
-            await Context.Channel.SendMessageAsync("I BUST I BUST SORRY SORRY SORRY IM GAY",false);
-        }
-        [Command("Autism")]
-        public async Task Autism()
-        {
-            await Context.Channel.SendMessageAsync("You have autism!",false);
+            await Context.Channel.SendMessageAsync("I BUST I BUST SORRY SORRY SORRY IM YES",false);
         }
         [Command("Wez")]
         public async Task Wez()
@@ -115,7 +110,7 @@ namespace HealthyBot.Modules
         [Command("Nut")]
         public async Task Nut()
         {
-            await Context.Channel.SendMessageAsync("TOUKA TOUKA TOUKA", false);
+            await Context.Channel.SendMessageAsync("B G BG", false);
         }
         [Command("Hello")]
         public async Task Hello()
@@ -151,7 +146,7 @@ namespace HealthyBot.Modules
         [Command("Beta")]
         public async Task Beta()
         {
-            await Context.Channel.SendMessageAsync("hey guys fawad syed here gonna mute mic and cs like a beta", false);
+            await Context.Channel.SendMessageAsync("hey guys REDACTED here gonna mute mic and cs like a beta", true);
         }
         [Command("Bitcoin")]
         public async Task UpdateBitcoinLabel()
