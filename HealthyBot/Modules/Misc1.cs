@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http;
+using System.Runtime.InteropServices.ComTypes;
 using Newtonsoft.Json.Linq;
 using Discord.Audio;
 using Discord;
@@ -192,8 +193,10 @@ namespace HealthyBot.Modules
         {
             const string address = "https://www.quandl.com/api/v3/datasets/SSE/TL0.json?api_key=NW6eAik2ebsCLuEgsEhA";
             var client = new HttpClient();
-            var teslaJson = await client.GetStringAsync(address);
-            var teslaObj = JObject.Parse(teslaJson);
+            var bitcoinJSON = await client.GetStringAsync(address);
+            var bitcoinObject = JObject.Parse(bitcoinJSON);
+            var bitcoinPrice = (double) bitcoinObject["data"]["2018-09-12"];
+            await Context.Channel.SendMessageAsync("This is the current price of bitcoin in USD: " + bitcoinPrice);
         }
 
     }
